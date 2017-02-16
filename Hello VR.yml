@@ -1,5 +1,3 @@
-# First
-First Project
 - name: Hello VR
   hosts: all
   tasks:
