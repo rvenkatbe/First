@@ -1,0 +1,9 @@
+# First
+First Project
+- name: Hello VR
+  hosts: all
+  tasks:
+    - name: Hello VR
+      debug:
+        msg: "Hello VR!"
+
