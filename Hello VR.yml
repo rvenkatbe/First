@@ -3,6 +3,9 @@
   tasks:
      - name: Transfer the script
        copy: src=test.sh dest=/d01/ansible mode=0777
+
+     - name: Execute the script
+       command: sh /d01/ansible/test.sh
        
        
        
