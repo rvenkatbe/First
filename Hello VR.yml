@@ -1,6 +1,8 @@
-- name: Hello VR
+- name: Transfer and execute a script.
   hosts: all
   tasks:
-    - name: Hello VR
-      script: /d01/ansible/first_call.sh
+     - name: Transfer the script
+       copy: src=test.sh dest=/d01/ansible mode=0777
+       
+       
        
