@@ -6,10 +6,7 @@
         msg: "Hello VR!"
         msg: "System {{ inventory_hostname }}"
         
-- hosts: all
-  tasks:
-    - name: Run ls.sh and output "ls /"
-      script: ls.sh
-      register: out
-
-    - debug: var=out.stdout_lines
+- name: Change the working directory to somedir/ before executing the command.
+  shell: first_call.sh >> somelog.txt
+  args:
+    chdir: /d01/ansbile
