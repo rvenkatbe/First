@@ -1,1 +1,1 @@
-touch venkad.txt
+touch /d01/ansible/dev.txt
