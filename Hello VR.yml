@@ -2,11 +2,6 @@
   hosts: all
   tasks:
     - name: Hello VR
-      debug:
-        msg: "Hello VR!"
-        msg: "System {{ inventory_hostname }}"
-        
-- name: Change the working directory to somedir/ before executing the command.
-  shell: first_call.sh >> somelog.txt
-  args:
-    chdir: /d01/ansbile
+        shell: first_call.sh >> somelog.txt
+        args:
+        chdir: /d01/ansbile
