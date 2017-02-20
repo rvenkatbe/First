@@ -6,10 +6,6 @@
         msg: "Hello VR!"
         msg: "System {{ inventory_hostname }}"
         
-     - shell: /usr/bin/uptime
-       register: hello
-       msg: "Hello Test {{ hello }}"
-
 - hosts: all
   tasks:
     - name: Run ls.sh and output "ls /"
