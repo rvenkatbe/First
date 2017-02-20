@@ -5,4 +5,8 @@
       debug:
         msg: "Hello VR!"
         msg: "System {{ inventory_hostname }}"
+        
+     - shell: /usr/bin/uptime
+     
+   
 
