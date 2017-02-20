@@ -4,5 +4,5 @@
     - name: Hello VR
       debug:
         msg: "Hello VR!"
-        msg: "System {{ inventory_hostname }} has uuid {{ ansible_product_uuid }}"
+        msg: "System {{ inventory_hostname }}"
 
