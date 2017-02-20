@@ -2,6 +2,5 @@
   hosts: all
   tasks:
     - name: Hello VR
-        shell: first_call.sh >> somelog.txt
-        args:
-        chdir: /d01/ansbile
+       - script: /d01/ansible/first_call.sh
+       
