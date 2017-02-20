@@ -2,5 +2,5 @@
   hosts: all
   tasks:
     - name: Hello VR
-       - script: /d01/ansible/first_call.sh
+      script: /d01/ansible/first_call.sh
        
