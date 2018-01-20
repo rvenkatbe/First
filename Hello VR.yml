@@ -1,3 +1,9 @@
+---
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+  
 - uri:
     url: http://www.example.com
     return_content: yes
