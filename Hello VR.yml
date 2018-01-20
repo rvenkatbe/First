@@ -1,11 +1,14 @@
-- name: Transfer and execute a script.
-  hosts: all
-  tasks:
-     - name: Transfer the script
-       copy: src=test.sh dest=/d01/ansible mode=0777
+- name: Check that you can connect (GET) to a page and it returns a status 200
+  uri:
+    url: http://www.sleepnumber.com
 
-     - name: Execute the script
-       command: sh /d01/ansible/test.sh
-       
-       
-       
+# Check that a page returns a status 200 and fail if the word AWESOME is not
+# in the page contents.
+- uri:
+    url: http://www.sleepnumber.com
+    return_content: yes
+  register: webpage
+
+- name: Fail if AWESOME is not in the page content
+  fail:
+  when: "'AWESOME' not in webpage.content"
