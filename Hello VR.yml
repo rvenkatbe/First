@@ -1,3 +1,8 @@
-- name: Check that you can connect (GET) to a page and it returns a status 200
-  uri:
+- uri:
     url: http://www.example.com
+    return_content: yes
+  register: webpage
+
+- name: Fail if AWESOME is not in the page content
+  fail:
+  when: "'AWESOME' not in webpage.content"
