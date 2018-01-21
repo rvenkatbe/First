@@ -4,6 +4,5 @@
   tasks:
      - name: Transfer the script
        uri: url: http://www.example.com
-		
      - name: Execute the script
        shell: echo "Hi! Tower is working."
