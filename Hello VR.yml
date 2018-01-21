@@ -4,3 +4,6 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: Check that you can connect (GET) to a page and it returns a status 200
+      uri:
+        url: http://www.example.com
