@@ -2,7 +2,7 @@
 - name: Transfer and execute a script.
   hosts: all
   tasks:
-     - name: Transfer the script
-       uri: url: http://www.example.com
-     - name: Execute the script
-       shell: echo "Hi! Tower is working."
+  # Check that you can connect (GET) to a page and it returns a status 200
+    - uri: url=http://www.example.com
+    - name: Execute the script
+        shell: echo "Hi! Tower is working."
